@@ -10,8 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <service
-            android:name=".MyService"
-            android:enabled="true"
+            android:name=".MyIntentService"
             android:exported="false"></service>
 
         <activity android:name=".MainActivity">

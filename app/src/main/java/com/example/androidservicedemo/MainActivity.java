@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
-
+public static final String TEXT = "some";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,12 +16,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startService(View v) {
-        Intent intent = new Intent(this, MyService.class);
+        Intent intent = new Intent(this, MyIntentService.class);
+        intent.putExtra(TEXT, "data");
         startService(intent);
     }
 
     public void stopService(View view) {
-        stopService(new Intent(this, MyService.class));
+//        stopService(new Intent(this, MyService.class));
     }
 
 }
